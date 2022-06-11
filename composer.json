@@ -1,4 +1,6 @@
 {
+    "name" : "veebiekspert/cloud-print",
+    "version" : "1.0.0",
     "require": {
         "guzzlehttp/guzzle": "7.0"
     }
