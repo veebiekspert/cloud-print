@@ -4,6 +4,6 @@
     "description": "PHP client to connect HTTP Cloud Printer",
     "homepage": "https://www.e-liides.ee/",
     "require": {
-        "guzzlehttp/guzzle": "7.0"
+        "guzzlehttp/guzzle": ">=7.0"
     }
 }
