@@ -3,6 +3,11 @@
     "type": "library",
     "description": "PHP client to connect HTTP Cloud Printer",
     "homepage": "https://www.e-liides.ee/",
+    "autoload": {
+        "psr-4": {
+            "Veebiekspert\\CloudPrint\\": "src/"
+        }
+    },
     "require": {
         "guzzlehttp/guzzle": ">=7.0"
     }
