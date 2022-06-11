@@ -70,7 +70,7 @@ class Api
         $client = new Client();
         $response = $client->request('POST', $this->url . $type . '/' . $method, [
             'verify' => false,
-            'body' => $filter,
+            'form_params' => $filter,
         ]);
         return json_decode($response->getBody(), true);
     }
