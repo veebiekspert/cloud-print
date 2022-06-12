@@ -37,7 +37,11 @@ class Api
      * @return array
      */
     public function getPrinters() {
-        return $this->sendRequest('cloud-print', 'get-printers');
+        $result = $this->sendRequest('cloud-print', 'get-printers');
+        if (isset($result['status']) && isset($result['data']) && $result['status'] == 'ok') {
+            return $result['data'];
+        }
+        return [];
     }
 
     /**
@@ -49,10 +53,14 @@ class Api
      */
     public function addJob($pdfSource, $printerId)
     {
-        return $this->sendRequest('cloud-print', 'add-job', array(
+        $result = $this->sendRequest('cloud-print', 'add-job', array(
             'file' => $pdfSource,
             'printer_id' => $printerId,
         ));
+        if (isset($result['status']) && isset($result['data']) && $result['status'] == 'ok') {
+            return $result['data'];
+        }
+        throw new \Exception($result['error']);
     }
 
     /**
