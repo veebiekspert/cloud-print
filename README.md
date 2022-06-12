@@ -46,4 +46,7 @@ Now insert licence key to opened popup and follow next steps.
 # Important notes for success printing
 1. Windows machine must be running
 2. Installed .exe application must be running, default it launch automatically after restart
-    
+3. Java installed to windows machine
+
+# Swagger documentation
+https://e-liides.ee/api/documentation#/Cloud%20Print    
